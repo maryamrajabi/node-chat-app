@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>نرم افزار چت</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+
+        socket.on('connect', () => {
+            console.log('Connected to server');
+        })
+
+        socket.on('disconnect', () => {
+            console.log('User disconnect from server')
+        })
+    </script>
 </head>
 <body>
 <h3>
